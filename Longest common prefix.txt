@@ -1,0 +1,32 @@
+#include <iostream> 
+#include <vector>
+class Solution {
+public:
+    
+    string longestCommonPrefix(vector<string>& strs) {
+        if(strs.size()==0)
+        {
+            return "";
+        }
+        if(strs.size()==1)
+        {
+           return strs[0];
+        
+        }
+        else
+        {
+            sort(strs.begin(), strs.end()); 
+            int length = strs[0].size();
+            string result = "";
+            for(int i = 0; i < length; i++){
+              if(strs[0][i] == strs[strs.size()-1][i]){
+                result += strs[0][i];
+              }
+              else{
+                break;
+              }
+        }
+        return result;
+        }
+    }
+};
