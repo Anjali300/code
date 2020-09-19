@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        if (nums.size() == 0) return 0;
+         
+        // iterate the array until the end
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] >= target) return i;
+        }
+         
+        // insert at the end
+        return nums.size();
+    }
+};
