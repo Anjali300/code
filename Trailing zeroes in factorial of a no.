@@ -1,0 +1,25 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+void trailingZeroes(int n) {
+        int s=0;
+        for(int i=5;n/i>=1;i*=5)
+        {
+            s=s+n/i;
+        }
+        cout<<s<<endl;
+    }
+
+int main() {
+	// your code goes here
+	int m;
+	cin>>m;
+	while(m>0)
+	{
+	    int f;
+	    cin>>f;
+	    trailingZeroes(f);
+	    m--;
+	}
+	return 0;
+}
