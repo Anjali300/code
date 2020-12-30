@@ -1,0 +1,38 @@
+#Approach 1 -O(n^2)
+
+int maxSubarraySum(int arr[], int n){
+    
+    // Your code here
+    int m=INT_MIN ;
+    for(int i=0;i<n;i++)
+    {
+        int s=arr[i];
+        for(int j=i+1;j<n;j++)
+        {
+           
+            s=s+arr[j];
+             m=max(m,s);
+            
+        }
+         m=max(m,arr[i]);
+    }
+    return m;
+    
+}
+
+
+#Efficient Approach  - O(n)
+
+int maxSubarraySum(int arr[], int n){
+    
+    // Your code here
+    int t =arr[0];
+    int m = arr[0];
+    for(int i=1;i<n;i++)
+    {
+        m =  max(arr[i],m+arr[i]);
+        t = max(t, m);
+    }
+    return t;
+    
+}
