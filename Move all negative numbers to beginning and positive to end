@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	int a[n];
+	for(int i=0;i<n;i++)
+	{
+		cin>>a[i];
+	}
+	int start =0;
+	int end = n-1;
+	int temp;
+	while(end>start)
+	{
+		if(a[end]>0)
+		{
+			end--;
+		}
+		if(a[start]<0)
+		{
+			start++;
+		}
+		else
+		{
+			temp = a[end];
+			a[end]=a[start];
+			a[start]=temp;
+			start++;
+			end--;
+			
+		}
+	}
+	for(int i=0;i<n;i++)
+	{
+		cout<<a[i]<<" ";
+	}
+	return 0;
+}
