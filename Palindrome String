@@ -1,0 +1,15 @@
+int isPlaindrome(string S)
+	{
+	    // Your code goes here
+	    string d;
+	    d =S;
+	    reverse(S.begin(),S.end());
+	    if(d==S)
+	    {
+	        return 1;
+	    }
+	    else
+	    {
+	        return 0;
+	    }
+	}
