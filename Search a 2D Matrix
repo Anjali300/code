@@ -1,0 +1,13 @@
+ bool searchMatrix(vector<vector<int>>& vec, int target) {
+         for (int i = 0; i < vec.size(); i++)
+         { 
+            for (int j = 0; j < vec[i].size(); j++) 
+            {
+               if(target==vec[i][j])
+               {
+                   return 1;
+               }
+            }
+        }
+        return 0;
+    }
