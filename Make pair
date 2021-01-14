@@ -1,0 +1,8 @@
+pair<int, int> makePair(int X, int Y)
+{
+    // your code here
+    //Return a pair of X and Y
+    pair<int,int> p;
+    p = make_pair(X,Y);
+    return p;
+}
