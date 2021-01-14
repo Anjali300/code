@@ -1,0 +1,20 @@
+Question  - Given an array of elements of size N containing positive integers. The task is to make pair of elements given in array such that 1st element will be paired with last element, 2nd element with 2nd last, 3rd element with 3rd last and so on. If the array is of odd size then make middle element as a pair with itself.
+
+Approach  -
+
+vector<pair<int, int>> array_of_Pairs(int arr[], int N)
+{
+     vector<pair<int, int>> p;
+    
+    int start = 0, end = N-1;
+    
+    while(start <= end)
+    {
+        p.push_back({arr[start], arr[end]});
+        
+        start++;
+        end--;
+    }
+    
+    return p;
+}
